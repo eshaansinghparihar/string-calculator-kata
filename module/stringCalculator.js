@@ -1,6 +1,7 @@
 function add(numbers){
 if(numbers === '') return 0;
-if(numbers === '1') return 1;
+const nums = numbers.split(',').map(Number);
+  return nums.reduce((sum, num) => sum + num, 0);
 }
 
 module.exports = {add};
