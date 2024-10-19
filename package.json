@@ -5,6 +5,11 @@
   "scripts": {
     "test": "jest"
   },
+  "jest": {
+  "collectCoverage": true,
+  "coverageDirectory": "coverage",
+  "coverageReporters": ["text", "html"]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
