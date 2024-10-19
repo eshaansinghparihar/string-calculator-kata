@@ -21,6 +21,11 @@ describe('Test for known amount of numbers', () => {
         const sum = stringCalculator.add("1");
         expect(sum).toBe(1);
     });
+
+    it(('should return 2 for "2,"'),()=>{
+        const sum = stringCalculator.add("2,");
+        expect(sum).toBe(2);
+    });
     
     it('should return 6 for "1,5',()=>{
         const sum = stringCalculator.add("1,5");
@@ -46,3 +51,18 @@ describe('Test to handle new lines between numbers',()=>{
     })
 
 })
+
+describe('Test to handle supported delimeter',()=>{
+
+    it('should return 3 for //;\n1;2',()=>{
+        const sum = stringCalculator.add('//;\n1;2');
+        expect(sum).toBe(3);
+    })
+
+    it('should work for delimeters of any length',()=>{
+        const sum = stringCalculator.add('//:;:\n1:;:2:;:3:;:4:;:');
+        expect(sum).toBe(1+2+3+4);
+    })
+})
+
+// describe()
