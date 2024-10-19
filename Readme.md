@@ -2,5 +2,5 @@
 
 ## Test Coverage
 
-[View Test Coverage Report](https://eshaansinghparihar.github.io/string-calculator-kata/coverage/html/)
+[View Test Coverage Report](https://eshaansinghparihar.github.io/string-calculator-kata/)
 
