@@ -48,5 +48,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_TOKEN }}
-          publish_dir: ./coverage/html
+          publish_dir: ./coverage/
           publish_branch: gh-pages
+          user_name: eshaansinghparihar
+          user_email: eshaan.singh.parihar@gmail.com
