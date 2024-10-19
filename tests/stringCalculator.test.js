@@ -65,4 +65,24 @@ describe('Test to handle supported delimeter',()=>{
     })
 })
 
-// describe()
+describe('Test to handle negative numbers', ()=>{
+    it(('should throw exception for "-2,"'),()=>{
+        expect(() => stringCalculator.add("-2")).
+        toThrow("negative numbers not allowed: -2");
+    });
+    
+    it('should throw exception for "1,-5',()=>{
+        expect(() => stringCalculator.add("1,-5")).
+        toThrow("negative numbers not allowed: -5");
+    });
+
+    it('should throw exception for //;\n1;-2',()=>{
+        expect(()=>stringCalculator.add('//;\n1;-2')).
+        toThrow("negative numbers not allowed: -2");
+    })
+
+    it('should throw exception work //:;:\n1:;:-2:;:-3:;:4:;: to handle delimeters of any length',()=>{
+        expect(()=>stringCalculator.add('//:;:\n1:;:-2:;:-3:;:4:;:')).
+        toThrow("negative numbers not allowed: -2, -3");
+    })
+})
