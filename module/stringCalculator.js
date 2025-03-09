@@ -19,7 +19,7 @@ if(typeof(numbers) === 'string')
         throw new Error(`negative numbers not allowed: ${negatives.join(', ')}`);
     }
 
-    return nums.reduce((sum, num) => sum + num, 0);
+    return nums.filter(num => num <= 1000).reduce((sum, num) => sum + num, 0);
 }
 }
 

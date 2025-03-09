@@ -86,3 +86,15 @@ describe('Test to handle negative numbers', ()=>{
         toThrow("negative numbers not allowed: -2, -3");
     })
 })
+
+describe('Test to ignore numbers greater than 1000',()=>{
+    it('should return 2 for 2,1001',()=>{
+        const sum = stringCalculator.add('2,1001');
+        expect(sum).toBe(2);
+    })
+
+    it('should return 1002 for 2,1000',()=>{
+        const sum = stringCalculator.add('2,1000');
+        expect(sum).toBe(1002);
+    })
+});
