@@ -5,7 +5,7 @@ if(typeof(numbers) === 'string')
 
     let nums = numbers, delimeter = '', negatives = [];
     if(numbers.startsWith('//')){
-        delimeter = nums.substring(2,nums.indexOf('\n'))
+        delimeter = nums.substring(2,nums.indexOf('\n'));
         nums = numbers.slice(2 + delimeter.length)
     }
     nums = (delimeter) ? nums.split(delimeter).map(Number) : nums.split(/[\n,]/).map(Number);

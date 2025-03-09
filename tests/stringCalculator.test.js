@@ -98,3 +98,14 @@ describe('Test to ignore numbers greater than 1000',()=>{
         expect(sum).toBe(1002);
     })
 });
+
+describe('Test to handle delimeters of any length',()=>{    
+    it('should return 6 for //[***]\n1***2***3',()=>{
+        const sum = stringCalculator.add('//***\n1***2***3');
+        expect(sum).toBe(6);
+    })
+    it('should return 6 for //[:;:;:]\n1:;::;2:;:;:3',()=>{
+        const sum = stringCalculator.add('//:;:\n1:;:2:;:3');
+        expect(sum).toBe(6);
+    })
+});
