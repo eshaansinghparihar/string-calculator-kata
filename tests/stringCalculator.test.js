@@ -111,6 +111,14 @@ describe('Test to handle delimeters of any length',()=>{
 });
 
 describe('Test to handle multiple delimeters',()=>{
+    it('should return 6 for //[*][%]\n1*2%3',()=>{
+        const sum = stringCalculator.add('//[*][%]\n1*2%3');
+        expect(sum).toBe(6);
+    })
+})
+
+
+describe('Test to handle multiple delimeters of length greater than one char',()=>{
     it('should return 6 for //[***][::]\n1***2::3',()=>{
         const sum = stringCalculator.add('//[***][::]\n1***2::3');
         expect(sum).toBe(6);
