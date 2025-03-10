@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
-          path: module/
+          path: ./
 
   deploy:
     runs-on: ubuntu-latest
@@ -42,13 +42,13 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: coverage-report
-          path: module/
+          path: ./
 
       - name: Publish to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_TOKEN }}
-          publish_dir: ./module/
+          publish_dir: ./
           publish_branch: gh-pages
           user_name: eshaansinghparihar
           user_email: eshaan.singh.parihar@gmail.com
