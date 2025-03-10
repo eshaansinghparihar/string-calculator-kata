@@ -2,13 +2,13 @@
   "numFailedTestSuites": 0,
   "numFailedTests": 0,
   "numPassedTestSuites": 1,
-  "numPassedTests": 19,
+  "numPassedTests": 20,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
   "numTotalTestSuites": 1,
-  "numTotalTests": 19,
+  "numTotalTests": 20,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,21 +26,21 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1741610571362,
+  "startTime": 1741610806972,
   "success": false,
   "testResults": [
     {
       "leaks": false,
       "numFailingTests": 0,
-      "numPassingTests": 19,
+      "numPassingTests": 20,
       "numPendingTests": 0,
       "numTodoTests": 0,
       "openHandles": [],
       "perfStats": {
-        "end": 1741610571773,
-        "runtime": 371,
+        "end": 1741610807400,
+        "runtime": 390,
         "slow": false,
-        "start": 1741610571402
+        "start": 1741610807010
       },
       "skipped": false,
       "snapshot": {
@@ -58,7 +58,7 @@
           "ancestorTitles": [
             "First Test"
           ],
-          "duration": 2,
+          "duration": 3,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "First Test test for nothing",
@@ -118,7 +118,7 @@
           "ancestorTitles": [
             "Test for known amount of numbers"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Test for known amount of numbers should return 6 for \"1,5",
@@ -181,19 +181,19 @@
           "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
-          "fullName": "Test to handle supported delimeter should work for delimeters of any length",
+          "fullName": "Test to handle supported delimeter should work for delimiters of any length",
           "invocations": 1,
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
           "status": "passed",
-          "title": "should work for delimeters of any length"
+          "title": "should work for delimiters of any length"
         },
         {
           "ancestorTitles": [
             "Test to handle negative numbers"
           ],
-          "duration": 7,
+          "duration": 8,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Test to handle negative numbers should throw exception for \"-2,\"",
@@ -223,7 +223,7 @@
           "ancestorTitles": [
             "Test to handle negative numbers"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Test to handle negative numbers should throw exception for //;\n1;-2",
@@ -238,22 +238,22 @@
           "ancestorTitles": [
             "Test to handle negative numbers"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
-          "fullName": "Test to handle negative numbers should throw exception work //:;:\n1:;:-2:;:-3:;:4:;: to handle delimeters of any length",
+          "fullName": "Test to handle negative numbers should throw exception work //:;:\n1:;:-2:;:-3:;:4:;: to handle delimiters of any length",
           "invocations": 1,
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
           "status": "passed",
-          "title": "should throw exception work //:;:\n1:;:-2:;:-3:;:4:;: to handle delimeters of any length"
+          "title": "should throw exception work //:;:\n1:;:-2:;:-3:;:4:;: to handle delimiters of any length"
         },
         {
           "ancestorTitles": [
             "Test to ignore numbers greater than 1000"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Test to ignore numbers greater than 1000 should return 2 for 2,1001",
@@ -268,7 +268,7 @@
           "ancestorTitles": [
             "Test to ignore numbers greater than 1000"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Test to ignore numbers greater than 1000 should return 1002 for 2,1000",
@@ -281,12 +281,12 @@
         },
         {
           "ancestorTitles": [
-            "Test to handle delimeters of any length"
+            "Test to handle delimiters of any length"
           ],
           "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
-          "fullName": "Test to handle delimeters of any length should return 6 for //[***]\n1***2***3",
+          "fullName": "Test to handle delimiters of any length should return 6 for //[***]\n1***2***3",
           "invocations": 1,
           "location": null,
           "numPassingAsserts": 1,
@@ -296,12 +296,12 @@
         },
         {
           "ancestorTitles": [
-            "Test to handle delimeters of any length"
+            "Test to handle delimiters of any length"
           ],
           "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
-          "fullName": "Test to handle delimeters of any length should return 6 for //[:;:;:]\n1:;::;2:;:;:3",
+          "fullName": "Test to handle delimiters of any length should return 6 for //[:;:;:]\n1:;::;2:;:;:3",
           "invocations": 1,
           "location": null,
           "numPassingAsserts": 1,
@@ -311,12 +311,27 @@
         },
         {
           "ancestorTitles": [
-            "Test to handle multiple delimeters"
+            "Test to handle multiple delimiters"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
-          "fullName": "Test to handle multiple delimeters should return 6 for //[***][::]\n1***2::3",
+          "fullName": "Test to handle multiple delimiters should return 6 for //[*][%]\n1*2%3",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return 6 for //[*][%]\n1*2%3"
+        },
+        {
+          "ancestorTitles": [
+            "Test to handle multiple delimiters of length greater than one char"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Test to handle multiple delimiters of length greater than one char should return 6 for //[***][::]\n1***2::3",
           "invocations": 1,
           "location": null,
           "numPassingAsserts": 1,
@@ -326,12 +341,12 @@
         },
         {
           "ancestorTitles": [
-            "Test to handle multiple delimeters"
+            "Test to handle multiple delimiters of length greater than one char"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
-          "fullName": "Test to handle multiple delimeters should return 6 for //[***][::][;]\n1***2::3;4",
+          "fullName": "Test to handle multiple delimiters of length greater than one char should return 6 for //[***][::][;]\n1***2::3;4",
           "invocations": 1,
           "location": null,
           "numPassingAsserts": 1,

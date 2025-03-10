@@ -59,7 +59,7 @@ describe('Test to handle supported delimeter',()=>{
         expect(sum).toBe(3);
     })
 
-    it('should work for delimeters of any length',()=>{
+    it('should work for delimiters of any length',()=>{
         const sum = stringCalculator.add('//:;:\n1:;:2:;:3:;:4:;:');
         expect(sum).toBe(1+2+3+4);
     })
@@ -81,7 +81,7 @@ describe('Test to handle negative numbers', ()=>{
         toThrow("negative numbers not allowed: -2");
     })
 
-    it('should throw exception work //:;:\n1:;:-2:;:-3:;:4:;: to handle delimeters of any length',()=>{
+    it('should throw exception work //:;:\n1:;:-2:;:-3:;:4:;: to handle delimiters of any length',()=>{
         expect(()=>stringCalculator.add('//:;:\n1:;:-2:;:-3:;:4:;:')).
         toThrow("negative numbers not allowed: -2, -3");
     })
@@ -99,7 +99,7 @@ describe('Test to ignore numbers greater than 1000',()=>{
     })
 });
 
-describe('Test to handle delimeters of any length',()=>{    
+describe('Test to handle delimiters of any length',()=>{    
     it('should return 6 for //[***]\n1***2***3',()=>{
         const sum = stringCalculator.add('//[***]\n1***2***3');
         expect(sum).toBe(6);
@@ -110,7 +110,15 @@ describe('Test to handle delimeters of any length',()=>{
     })
 });
 
-describe('Test to handle multiple delimeters',()=>{
+describe('Test to handle multiple delimiters',()=>{
+    it('should return 6 for //[*][%]\n1*2%3',()=>{
+        const sum = stringCalculator.add('//[*][%]\n1*2%3');
+        expect(sum).toBe(6);
+    })
+})
+
+
+describe('Test to handle multiple delimiters of length greater than one char',()=>{
     it('should return 6 for //[***][::]\n1***2::3',()=>{
         const sum = stringCalculator.add('//[***][::]\n1***2::3');
         expect(sum).toBe(6);
