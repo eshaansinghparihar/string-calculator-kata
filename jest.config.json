@@ -1,0 +1,26 @@
+{
+  "collectCoverage": true,
+  "coverageDirectory": "coverage",
+  "coverageReporters": ["html"],
+  "reporters": [
+    "default",
+    [
+      "jest-html-reporter",
+      {
+        "pageTitle": "Test Report",
+        "outputPath": "./test-report.html",
+        "includeFailureMsg": true,
+        "includeConsoleLog": true
+      }
+    ],
+    [
+      "jest-stare",
+      {
+        "resultDir": "./jest-stare",
+        "reportTitle": "Jest Test Results",
+        "coverageLink": "./coverage/lcov-report/index.html",
+        "additionalResults": true
+      }
+    ]
+  ]
+}
