@@ -2,13 +2,13 @@
   "numFailedTestSuites": 0,
   "numFailedTests": 0,
   "numPassedTestSuites": 1,
-  "numPassedTests": 17,
+  "numPassedTests": 19,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
   "numTotalTestSuites": 1,
-  "numTotalTests": 17,
+  "numTotalTests": 19,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,21 +26,21 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1741596094280,
+  "startTime": 1741610495105,
   "success": false,
   "testResults": [
     {
       "leaks": false,
       "numFailingTests": 0,
-      "numPassingTests": 17,
+      "numPassingTests": 19,
       "numPendingTests": 0,
       "numTodoTests": 0,
       "openHandles": [],
       "perfStats": {
-        "end": 1741596095217,
-        "runtime": 821,
+        "end": 1741610495943,
+        "runtime": 696,
         "slow": false,
-        "start": 1741596094396
+        "start": 1741610495247
       },
       "skipped": false,
       "snapshot": {
@@ -58,7 +58,7 @@
           "ancestorTitles": [
             "First Test"
           ],
-          "duration": 5,
+          "duration": 4,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "First Test test for nothing",
@@ -133,7 +133,7 @@
           "ancestorTitles": [
             "Test for unknown amount of numbers"
           ],
-          "duration": 1,
+          "duration": 2,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Test for unknown amount of numbers should work for unknown anount of numbers",
@@ -148,7 +148,7 @@
           "ancestorTitles": [
             "Test to handle new lines between numbers"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Test to handle new lines between numbers should return 6 for 1\n2,3",
@@ -193,7 +193,7 @@
           "ancestorTitles": [
             "Test to handle negative numbers"
           ],
-          "duration": 30,
+          "duration": 33,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Test to handle negative numbers should throw exception for \"-2,\"",
@@ -208,7 +208,7 @@
           "ancestorTitles": [
             "Test to handle negative numbers"
           ],
-          "duration": 3,
+          "duration": 2,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Test to handle negative numbers should throw exception for \"1,-5",
@@ -223,7 +223,7 @@
           "ancestorTitles": [
             "Test to handle negative numbers"
           ],
-          "duration": 3,
+          "duration": 2,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Test to handle negative numbers should throw exception for //;\n1;-2",
@@ -253,7 +253,7 @@
           "ancestorTitles": [
             "Test to ignore numbers greater than 1000"
           ],
-          "duration": 1,
+          "duration": 9,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Test to ignore numbers greater than 1000 should return 2 for 2,1001",
@@ -268,7 +268,7 @@
           "ancestorTitles": [
             "Test to ignore numbers greater than 1000"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Test to ignore numbers greater than 1000 should return 1002 for 2,1000",
@@ -283,7 +283,7 @@
           "ancestorTitles": [
             "Test to handle delimeters of any length"
           ],
-          "duration": 2,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Test to handle delimeters of any length should return 6 for //[***]\n1***2***3",
@@ -298,7 +298,7 @@
           "ancestorTitles": [
             "Test to handle delimeters of any length"
           ],
-          "duration": 2,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Test to handle delimeters of any length should return 6 for //[:;:;:]\n1:;::;2:;:;:3",
@@ -308,6 +308,36 @@
           "retryReasons": [],
           "status": "passed",
           "title": "should return 6 for //[:;:;:]\n1:;::;2:;:;:3"
+        },
+        {
+          "ancestorTitles": [
+            "Test to handle multiple delimeters"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Test to handle multiple delimeters should return 6 for //[***][::]\n1***2::3",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return 6 for //[***][::]\n1***2::3"
+        },
+        {
+          "ancestorTitles": [
+            "Test to handle multiple delimeters"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Test to handle multiple delimeters should return 6 for //[***][::][;]\n1***2::3;4",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return 6 for //[***][::][;]\n1***2::3;4"
         }
       ],
       "failureMessage": null

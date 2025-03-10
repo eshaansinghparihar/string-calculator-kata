@@ -3,14 +3,27 @@ function add(numbers){
     {
         if(numbers === '') return 0;
     
-        let nums = numbers, delimeter = '', negatives = [];
+        let nums = numbers, delimiters = [], delimiter, negatives = [];
         if(numbers.startsWith('//')){
-            delimeter = nums.substring(2,nums.indexOf('\n'));
-            if(delimeter.startsWith('[') && delimeter.endsWith(']'))
-                delimeter = delimeter.replace(/[\[\]]/g, '');
-            nums = numbers.slice(numbers.indexOf('\n'));
+            delimiter = nums.substring(2,nums.indexOf('\n'));
+            
+                if(delimiter.startsWith('[') && delimiter.endsWith(']'))
+                {
+                    let match;
+                    let pattern = /\[([^\]]+)\]/g;
+                        while ((match = pattern.exec(delimiter)) !== null)
+                            delimiters.push(match[1]);
+                    delimiter = '';
+                }
+            nums = numbers.slice(numbers.indexOf('\n')+1);
+            delimiters.forEach(delimiter=>{
+            nums = nums.split(delimiter).join(',')
+        })
         }
-        nums = (delimeter) ? nums.split(delimeter).map(Number) : nums.split(/[\n,]/).map(Number);
+        
+        
+        nums = (delimiter) ? nums.split(delimiter).map(Number) : nums.split(/[\n,]/).map(Number);
+        
         
         nums.forEach(number=>{
             if(number < 0)
@@ -22,7 +35,7 @@ function add(numbers){
         }
     
         return nums.filter(num => num <= 1000).reduce((sum, num) => sum + num, 0);
-    }
-    }
+}
+}
 
 module.exports = {add};
